@@ -55,3 +55,16 @@ iface ens256 inet static
 address 192.168.0.164
 netmask 255.255.255.252
 ```
+### HQ-R
+```
+allow-hotplug ens192
+iface ens192 inet static
+address 192.168.0.2
+netmask 255.255.255.128
+
+allow-hotplug ens224
+iface ens224 inet static
+address 192.168.0.161
+netmask 255.255.255.252
+gateway 192.168.0.162
+```
