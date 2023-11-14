@@ -32,3 +32,26 @@
 ```
 ip a
 ```
+### Зашёл в файл настройки конфигурации интерфесов
+```
+nano /etc/network/interfaces
+```
+### Назначил IP на интерфейсы в соответствии с таблицей адресации
+### ISP
+```
+auto ens192
+iface ens192 inet static
+address 10.12.17.10
+netmask 255.255.255.0
+gateway 10.12.25.254
+
+auto ens224
+iface ens224 inet static
+address 192.168.0.162
+netmask 255.255.255.252
+
+auto ens256 
+iface ens256 inet static
+address 192.168.0.164
+netmask 255.255.255.252
+```
