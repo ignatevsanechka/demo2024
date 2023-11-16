@@ -111,3 +111,5 @@ Systemctl restart networking.service
 ```
 ### По аналогии делаем тоже самое с другими машинами
 ## №1.2
+
+![котяра](https://i0.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1)
