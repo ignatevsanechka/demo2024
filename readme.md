@@ -111,5 +111,32 @@ Systemctl restart networking.service
 ```
 ### По аналогии делаем тоже самое с другими машинами
 ## №1.2
+### Описание задания
+- Настройте внутреннюю динамическую маршрутизацию по средствам FRR. Выберите и обоснуйте выбор протокола динамической маршрутизации из расчёта, что в дальнейшем сеть будет масштабироваться.
+### Установка пакета frr
+```
+apt-get install frr
+```
+### После установки frr проверил его состояние
+```
+systemctl status frr
+```
+![image](https://github.com/ignatevsanechka/demo2024/assets/149755492/cc0335e0-cf5f-4e4e-8666-f5b6c21dd823)
+### Зашел в файл
+```
+nano /etc/frr/daemons
+```
+### Изменил значение
+```
+ospfd = yes
+```
+### Перезагрузил службу frr
+```
+systemctl restart frr
+```
+### Зашел в настройку маршрутизации на ISP
+```
+vtysh
+```
 
 ![котяра](https://i0.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1)
