@@ -19,7 +19,7 @@
 
 | Имя устройства | Итерфейс |  IPv4/IPv6   | Маска/Префикс |       Шлюз       |
 | -------------- | -------- | ------------ | ------------- |    ----------    |
-|                | ens 192  | 10.12.17.10  | /24           | 10.12.25.254     |
+|                | ens 192  | 10.12.17.5  | /24           | 10.12.25.254     |
 | ISP            | ens 224  | 192.168.0.162| /30           |                  |
 |                | ens 256  | 192.168.0.164| /30           |                  |
 | HQ-R           | ens 192  | 192.168.0.2  | /25           |                  |
@@ -138,5 +138,31 @@ systemctl restart frr
 ```
 vtysh
 ```
+### Просмотрел IP адреса и их состояния
+```
+show interface brief
+```
+### Зашел в конфигурацию терминала
+```
+conf t
+```
+### Запустил процесс OSPF
+```
+router ospf
+```
+### Внес интерфейсы
+```
+network 192.168.0.162/30 area 0
+network 192.168.0.162/30 area 0
+```
+### Посмотрел соседей
+```
+do show ip ospf neighbor
+```
+![image](https://github.com/ignatevsanechka/demo2024/assets/149755492/774e715f-71c0-4d42-860c-bce7fdd875a4)
 
+### Сохранил изменения
+```
+copy running-config startup-config
+```
 ![котяра](https://i0.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1)
